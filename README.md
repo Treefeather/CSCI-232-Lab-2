@@ -1,11 +1,15 @@
 # CSCI-232-Lab-2
 CSCI Lab 2 repository
-What we need to do
-Create a Hashtable that is an array of Trees:
+
+What we need to do:
+
+1) Create a Hashtable that is an array of Trees:
 
 Hash function: H(x) = x%arraySize
 
 arraySize must be an input parameter
+
+2) create operation and main classes for methods and use.
 
 Insert Method: Set method to create a tree when array index is null, and set root as your input data; when not null (there is already a tree) call an insert method for binary search tree. Set if statement “if input == node.getValue and delete flag not true, break out of method” (so we don’t add duplicates); else flip flag to false(to reinsert value if previously deleted).
 
