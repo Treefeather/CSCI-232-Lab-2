@@ -21,7 +21,15 @@ class Utils
     public void search(int key) //use hash to find index, then search tree
     {
         int index = Hash(key);
-        hashTable(index).search();
+        boolean isThere = hashTable(index).find();
+        if (isThere)
+        {
+            System.out.println("This key was found in the tree for index " + index);
+        }
+        else
+        {
+            System.out.println("This key was not found in the tree for index " + index);
+        }
     }
     
     public void display() //use inordered traversal of each tree
