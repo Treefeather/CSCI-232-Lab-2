@@ -28,7 +28,7 @@ class Utils
         }
         else
         {
-            System.out.println("We could not find " + key + "!");
+            System.out.println("We could not find " + key + ".");
         }
     }
     
