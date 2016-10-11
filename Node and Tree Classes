@@ -61,19 +61,19 @@ class Tree
 	public Tree() // constructor
 	{ root = null; } // no nodes in tree yet
 	//-------------------------------------------------------------
-	public Node find(Node node) // find node with given key
+	public boolean find(Node node) // find node with given key
 	{ // (assumes non-empty tree)
 		Node current = root; // start at root
 		while(current.getName() != node.getName()) // while no match,
 		{
-			if(node.getWeight() < current.getWeight()) // go left?
+			if(node.getName() < current.getName()) // go left?
 				current = current.getLeft();
 			else // or go right?
 				current = current.getRight();
 			if(current == null) // if no child,
-				return null; // didn't find it
+				return false; // didn't find it
 		}
-		return current; // found it
+		return true; // found it
 	} // end find()
 	// -------------------------------------------------------------
 	// -------------------------------------------------------------
