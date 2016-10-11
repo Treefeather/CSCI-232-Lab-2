@@ -24,11 +24,11 @@ class Utils
         boolean isThere = hashTable(index).find();
         if (isThere)
         {
-            System.out.println("This key was found in the tree for index " + index);
+            System.out.println("We found " + key + "!");
         }
         else
         {
-            System.out.println("This key was not found in the tree for index " + index);
+            System.out.println("We could not find " + key + "!");
         }
     }
     
