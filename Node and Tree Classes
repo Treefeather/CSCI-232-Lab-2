@@ -53,43 +53,6 @@ public class Node implements Comparable<Node>{             //TA assist on format
 } // end class Node
 ////////////////////////////////////////////////////////////////
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package lab_1;
-
-/**
- *
- * @author f39k143
- */
-//public class tree {
-//    
-//}
-// tree.java
-// demonstrates binary tree
-// to run this program: C>java TreeApp
-import java.io.*;
-import java.util.*; // for Stack class
-////////////////////////////////////////////////////////////////
-//class Node
-//{
-//	public int iData; // data item (key)
-//	public double dData; // data item
-//	public Node getLeft(); // this node's left child
-//	public Node getRight(); // this node's right child
-//	public void displayNode() // display ourself
-//	{
-//		System.out.print('{');
-//		System.out.print(iData);
-//		System.out.print(", ");
-//		System.out.print(dData);
-//		System.out.print("} ");
-//	}
-//} // end class Node
-////////////////////////////////////////////////////////////////
-
 class Tree
 {
     String acc = "";
@@ -265,17 +228,7 @@ class Tree
 		}
 	}
 	// -------------------------------------------------------------
-//        	private void decode(Node localRoot, String codedMessage)
-//	{
-//		if(localRoot != null)
-//		{
-//                        localRoot.setCode(code);
-//			//System.out.print(localRoot.getName() + " ");
-//			preOrder(localRoot.getLeft(), code + "0");
-//			preOrder(localRoot.getRight(), code + "1");
-//
-//		}
-//	}
+
 	private void inOrder(Node localRoot)
 	{
 		if(localRoot != null)
