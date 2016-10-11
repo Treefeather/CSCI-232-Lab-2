@@ -1,1 +1,27 @@
 // add code for a class for methods here 
+class Utils
+{
+    public void makeHashtable(int arraySize)
+    {  
+        HashMap hashTable = new HashMap(arraySize);
+    }
+    
+    public int Hash(int key)
+    {
+        int index = key%arraySize;
+        return index;
+    }
+    
+    public void insert(int key) //use hash to find index, then insert in tree
+    {
+    }
+    
+    public void search(int key) //use hash to find index, then search tree
+    {
+    }
+    
+    public void display() //use inordered traversal of each tree
+    {
+    }
+    
+}
