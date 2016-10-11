@@ -14,10 +14,14 @@ class Utils
     
     public void insert(int key) //use hash to find index, then insert in tree
     {
+        int index = Hash(key);
+        hashTable(index).insert();
     }
     
     public void search(int key) //use hash to find index, then search tree
     {
+        int index = Hash(key);
+        hashTable(index).search();
     }
     
     public void display() //use inordered traversal of each tree
