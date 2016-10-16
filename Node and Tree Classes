@@ -7,52 +7,6 @@ import java.util.*; // for Stack class
 
 package lab_2;
 
-public class Node implements Comparable<Node>{             //TA assist on format
-    private char name;
-    private Node leftChild;
-    private Node rightChild;
-    
-    Node(int n){          //TA assist on format
-        this.name = n;
-        this.leftChild = null;
-        this.rightChild = null;
-    }
-    
-    Node(Node l, Node r){
-        this.value = '\0';
-        this.weight = l.weight +r.weight;
-        this.leftChild = l;
-        this.rightChild = r;
-    }
-   
-    public void setName(int n)
-    {
-        name = n;
-    }
-    
-    public char getName()
-    {
-        return value;
-    }
-    public void setLeft(Node newLeft)
-    {
-        leftChild = newLeft;
-    }
-    public void setRight(Node newRight)
-    {
-        rightChild = newRight;
-    }
-    public Node getLeft()
-    {
-        return leftChild;
-    }
-    public Node getRight()
-    {
-        return rightChild;
-    }
-} // end class Node
-////////////////////////////////////////////////////////////////
-
 class Tree
 {
     String acc = "";
@@ -88,7 +42,7 @@ class Tree
 			while(true) // (exits internally)
 			{
 				parent = current;
-				if(newNode.getWeight() < current.getWeight()) // go left?
+				if(newNode.getValue() < current.getValue()) // go left?
 				{
 					current = current.getLeft();
 					if(current == null) // if end of the line,
@@ -220,8 +174,8 @@ class Tree
 	{
 		if(localRoot != null)
 		{
-                        localRoot.setCode(code);
-			//System.out.print(localRoot.getName() + " ");
+                        //localRoot.setCode(code);
+			System.out.print(localRoot.getName() + " ");
 			preOrder(localRoot.getLeft(), code + "0");
 			preOrder(localRoot.getRight(), code + "1");
 
