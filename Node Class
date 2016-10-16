@@ -1,0 +1,45 @@
+package lab_2;
+
+public class Node{             //TA assist on format
+    private int value;
+    private Node leftChild;
+    private Node rightChild;
+    
+    Node(int v){          //TA assist on format
+        this.value = v;
+        this.leftChild = null;
+        this.rightChild = null;
+    }
+    
+    Node(Node l, Node r){
+        this.leftChild = l;
+        this.rightChild = r;
+    }
+   
+    public void setName(int v)
+    {
+        value = v;
+    }
+    
+    public int getValue()
+    {
+        return value;
+    }
+    public void setLeft(Node newLeft)
+    {
+        leftChild = newLeft;
+    }
+    public void setRight(Node newRight)
+    {
+        rightChild = newRight;
+    }
+    public Node getLeft()
+    {
+        return leftChild;
+    }
+    public Node getRight()
+    {
+        return rightChild;
+    }
+} // end class Node
+////////////////////////////////////////////////////////////////
