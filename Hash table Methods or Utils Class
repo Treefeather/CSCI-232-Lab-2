@@ -1,9 +1,18 @@
+
+package lab_2;
+
+import java.util.HashMap;
+
 // add code for a class for methods here 
 class Utils
 {
+    private HashMap hashTable;
+    private int arraySize;
+    
     public void makeHashtable(int arraySize)
     {  
-        HashMap hashTable = new HashMap(arraySize);
+        hashTable = new HashMap(arraySize);
+        this.arraySize = arraySize;
     }
     
     public int Hash(int key)
@@ -14,14 +23,19 @@ class Utils
     
     public void insert(int key) //use hash to find index, then insert in tree
     {
-        int index = Hash(key);
-        hashTable(index).insert();
+        boolean isThere = hashTable.containsValue(key); //will this return the correct value for individual nodes or just full trees?
+        if (!isThere)
+        {
+            int index = Hash(key);
+            Node newNode = new Node(key);
+            hashTable.put(index, key);//.insert(); //still need to insert this into the actual tree
+        }
     }
     
     public void search(int key) //use hash to find index, then search tree
     {
-        int index = Hash(key);
-        boolean isThere = hashTable(index).find();
+        //int index = Hash(key);
+        boolean isThere = hashTable.containsValue(key);//.find(); //not sure if this just finds the tree or looks into each node
         if (isThere)
         {
             System.out.println("We found " + key + "!");
@@ -36,7 +50,7 @@ class Utils
     {
         for (int i = 0; i<arraySize; i++)
         {
-            hashTable(i).traverse(2); //how do we get the tree assiociated with the given index?
+            hashTable.get(i);//.traverse(2); //how do we get the tree assiociated with the given index?
         }
     }
     
