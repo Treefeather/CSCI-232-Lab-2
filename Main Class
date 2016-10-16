@@ -15,9 +15,31 @@ public class Main {
             {
 	        Scanner s= new Scanner(System.in);
 		String i= "";
-		System.out.println("Enter first letter of enter, show, code, or decode: ");
+		System.out.println("Enter size of hash table: "); //cast string to int
+		int size =s.next();
+		System.out.println("Enter initial number of items: ");
+		int num =s.next(); //cast string to int
+		System.out.println("Enter first letter of show, insert, or find: ");
 		i=s.next();
-		if (i.equals("e")){
+		if (i.equals("s")){
+		
+		//print heap
+		
+		}
+		else if (i.equals("i"))
+		{
+		System.out.println(Enter key value to insert: ");
+		int key= s.next(); //cast string to int
+		//insert key
+		}
+		else if (i.equals("f"))
+		{
+		System.out.println(Enter key value to insert: ");
+		int key= s.next(); //cast string to int
+		//find key
+		}
+		}
+		}
 			System.out.println("Enter text lines (only in lowercase), terminate with $ on it's own line");
 			while (s.hasNextLine()){
 				String line=s.nextLine();
