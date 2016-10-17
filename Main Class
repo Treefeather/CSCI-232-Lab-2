@@ -15,10 +15,10 @@ public class Main {
             {
 	        Scanner s= new Scanner(System.in);
 		String i= "";
-		System.out.println("Enter size of hash table: "); //cast string to int
-		int size =s.next();
+		System.out.println("Enter size of hash table: "); 
+		int size =s.nextInt();
 		System.out.println("Enter initial number of items: ");
-		int num =s.next(); //cast string to int
+		int num =s.nextInt(); 
 		System.out.println("Enter first letter of show, insert, or find: ");
 		i=s.next();
 		if (i.equals("s")){
@@ -28,61 +28,17 @@ public class Main {
 		}
 		else if (i.equals("i"))
 		{
-		System.out.println(Enter key value to insert: ");
-		int key= s.next(); //cast string to int
+		System.out.println("Enter key value to insert: ");
+		int key= s.nextInt(); 
 		//insert key
 		}
 		else if (i.equals("f"))
 		{
-		System.out.println(Enter key value to insert: ");
-		int key= s.next(); //cast string to int
+		System.out.println("Enter key value to insert: ");
+		int key= s.nextInt(); 
 		//find key
 		}
 		}
 		}
-			System.out.println("Enter text lines (only in lowercase), terminate with $ on it's own line");
-			while (s.hasNextLine()){
-				String line=s.nextLine();
-				if (line.contains("$")) //debugging help from TA
-				{
-					break;
-				}
-				else{
-				m= m+line+"/";
-			}
-			}
-			m=m.substring(1);
-			m=m.replace(' ','[');
-
-                    System.out.println(m);
-		    utils.countLetters(m);
-                    utils.makeTree();
-                    utils.assignCodes();
-                            
-		}
-		else if (i.equals("s")){
-                    //print huffman tree
-                    utils.print();
-		}
-		else if (i.equals("c")){
-                    //print code table and coded message
-                    utils.printCodeTable();
-                    System.out.println("");
-                    System.out.println("Message:");
-                    System.out.println(m);
-                    System.out.println("Coded Message:");
-                    utils.encode(m);
-       		}
-                else if (i.equals("d")){
-                    //print decoded message
-                    System.out.println("Decoded Message:");
-                    String b = utils.getCodedMessage();
-                    utils.decode(b);
-                }
-		else {
-                    keepGoing = false;
-		}
-            }
-	}
-}
+		}	
 
